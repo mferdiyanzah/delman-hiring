@@ -1,18 +1,17 @@
 "use client";
 
 import { Box, Flex, Stack, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { sidebarItems } from "./dashboard-layout.const";
 import SidebarItem from "./sidebar-item";
 
 function DashboardLayout({ children }: { children: React.ReactNode }) {
-  const localSidebarStatus =
-    window !== undefined
-      ? localStorage.getItem("sidebarStatus") === "true"
-      : false;
-  const [isSidebarOpen, setIsSidebarOpen] =
-    useState<boolean>(localSidebarStatus);
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);
+  useEffect(() => {
+    const sidebarStatus = localStorage.getItem("sidebarStatus") === "true";
+    setIsSidebarOpen(sidebarStatus);
+  }, []);
 
   const handleToggle = () => {
     setIsSidebarOpen(!isSidebarOpen);
