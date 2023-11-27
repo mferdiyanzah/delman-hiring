@@ -1,12 +1,5 @@
 import { Stack } from "@chakra-ui/react";
-import {
-  FC,
-  createContext,
-  forwardRef,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
+import { FC, createContext, forwardRef, useCallback, useState } from "react";
 import { FixedSizeGrid as Grid } from "react-window";
 import {
   InnerGridElementTypeProps,

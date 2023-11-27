@@ -1,6 +1,6 @@
-import { ISales, IUsers } from "@/shared/types";
-import StickyGrid from "./sticky-grid-context";
+import { IUsers } from "@/shared/types";
 import Row from "./row";
+import StickyGrid from "./sticky-grid-context";
 
 const DashboardTable = ({ data }: { data: IUsers[] }) => {
   const headerKeys = Object.keys(data[0]);

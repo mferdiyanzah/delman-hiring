@@ -9,7 +9,7 @@ export default function useGetSalesData() {
     queryKey: "salesData",
     queryFn: getSalesData,
     select: ({ data }: { data: ISales[] }) => data,
-    onError: (error) => {
+    onError: () => {
       Toast({
         title: "Error",
         description: "There was an error fetching sales data",

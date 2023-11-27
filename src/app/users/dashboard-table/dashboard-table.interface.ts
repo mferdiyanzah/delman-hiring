@@ -1,4 +1,4 @@
-import { DataItem, ISales, IUsers } from "@/shared/types";
+import { DataItem } from "@/shared/types";
 import { ComponentType, ReactNode } from "react";
 import { GridChildComponentProps } from "react-window";
 
