@@ -64,6 +64,8 @@ const innerGridElementType = forwardRef<
   </StickyGridContext.Consumer>
 ));
 
+innerGridElementType.displayName = "innerGridElementType";
+
 const StickyGrid: FC<StickyGridProps> = ({
   stickyHeight,
   headerKeys,
@@ -85,6 +87,8 @@ const StickyGrid: FC<StickyGridProps> = ({
 
   const colWidth = useMemo(() => {
     return dimenstions.width / headerKeys.length;
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dimenstions.width]);
 
   return (

@@ -38,6 +38,8 @@ export default function Search() {
         clearTimeout(debounceTimeout.current);
       }
     };
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [emailValue]);
 
   return (
