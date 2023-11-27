@@ -19,7 +19,7 @@ function DashboardLayout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <Stack>
+    <Stack minHeight="100%">
       <Box
         bg="gray.100"
         borderRight="1px"

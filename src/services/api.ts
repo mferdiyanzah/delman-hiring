@@ -17,3 +17,8 @@ export const registerUser = async (payload: RegisterUserPayload) => {
   const response = await axios.post(`${baseUrl}users`, payload);
   return response.data;
 };
+
+export const deleteUser = async (id: string) => {
+  const response = await axios.delete(`${baseUrl}users/${id}`);
+  return response.data;
+};
